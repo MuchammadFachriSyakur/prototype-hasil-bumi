@@ -58,7 +58,7 @@ function renderDetail() {
       message = `Hi, I'm interested in this product: ${product.name[currentLang]}`;
     }
 
-    const waLink = `https://wa.me/6281234567890?text=${encodeURIComponent(
+    const waLink = `https://wa.me/6285230017377?text=${encodeURIComponent(
       message
     )}`;
     orderBtn.setAttribute("href", waLink);
