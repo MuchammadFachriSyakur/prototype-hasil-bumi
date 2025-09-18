@@ -113,7 +113,7 @@ form?.addEventListener("submit", async (e) => {
 // ===============================
 // Main translation logic
 // ===============================
-let currentLang = sessionStorage.getItem("lang")
+let currentLang = sessionStorage.getItem("lang") || "id";
 let translations = {};
 let products = []; // ✅ simpan produk global
 
