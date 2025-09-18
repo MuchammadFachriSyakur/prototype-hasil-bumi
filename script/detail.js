@@ -75,3 +75,4 @@ function updateLangIcon() {
       ? "https://flagcdn.com/w20/gb.png"
       : "https://flagcdn.com/w20/id.png";
 }
+
