@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="detail.title">Detail Produk</title>
+    <style>
+      :root {
+        --green: #117a4f;
+        --accent: #c8a165;
+        --light: #f7f7f7;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        --radius: 14px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--light);
+        color: #333;
+        line-height: 1.7;
+      }
+      .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 2rem;
+      }
+      .product-detail {
+        background: #fff;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        padding: 1.5rem;
+      }
+      .product-detail img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .product-info {
+        margin-top: 1.2rem;
+      }
+      .product-info h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: var(--green);
+      }
+      .product-info p {
+        font-size: 1.1rem;
+        color: #555;
+      }
+      /* Tombol pesan sekarang */
+      #orderBtn {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 14px 26px;
+        border-radius: 999px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        background: var(--green);
+        color: #fff;
+        text-decoration: none;
+        transition: 0.25s;
+      }
+      #orderBtn:hover {
+        filter: brightness(1.05);
+      }
+      #langSwitcher {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="langSwitcher">
+      <img src="https://flagcdn.com/w20/gb.png" alt="lang" />
+    </div>
+
+    <div class="container">
+      <div id="productDetail" class="product-detail">
+        <p>Loading...</p>
+      </div>
+      <a id="orderBtn">Pesan Sekarang</a>
+    </div>
+
+    <script>
+      let currentLang = sessionStorage.getItem("lang") || "id";
+      let products = [];
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get("id");
+
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          const res = await fetch("data/products.json");
+          products = await res.json();
+          renderDetail();
+        } catch (err) {
+          console.error("Gagal load produk:", err);
+          document.getElementById("productDetail").innerHTML =
+            "<p>Produk tidak ditemukan.</p>";
+        }
+
+        document
+          .getElementById("langSwitcher")
+          ?.addEventListener("click", () => {
+            currentLang = currentLang === "id" ? "en" : "id";
+            document.documentElement.lang = currentLang;
+            renderDetail();
+            updateLangIcon();
+          });
+
+        updateLangIcon();
+      });
+
+      function renderDetail() {
+        const container = document.getElementById("productDetail");
+        const product = products.find((p) => p.id === productId);
+
+        if (!product) {
+          container.innerHTML = "<p>Produk tidak ditemukan.</p>";
+          return;
+        }
+
+        container.innerHTML = `
+          <img src="${product.image}" alt="${product.name[currentLang]}" />
+          <div class="product-info">
+            <h1>${product.name[currentLang]}</h1>
+            <p>${product.desc[currentLang]}</p>
+          </div>
+        `;
+
+        // Update link "Pesan Sekarang"
+        const orderBtn = document.getElementById("orderBtn");
+        if (orderBtn) {
+          orderBtn.textContent =
+            currentLang === "id" ? "Pesan Sekarang" : "Order Now";
+          let message =
+            currentLang === "id"
+              ? `Halo, saya tertarik dengan produk ini: ${product.name[currentLang]}`
+              : `Hi, I'm interested in this product: ${product.name[currentLang]}`;
+          const waLink = `https://wa.me/6281234567890?text=${encodeURIComponent(
+            message
+          )}`;
+          orderBtn.setAttribute("href", waLink);
+          orderBtn.setAttribute("target", "_blank");
+        }
+      }
+
+      function updateLangIcon() {
+        const langBtn = document.getElementById("langSwitcher");
+        const img = langBtn.querySelector("img");
+        img.src =
+          currentLang === "id"
+            ? "https://flagcdn.com/w20/gb.png"
+            : "https://flagcdn.com/w20/id.png";
+      }
+    </script>
+  </body>
+</html>

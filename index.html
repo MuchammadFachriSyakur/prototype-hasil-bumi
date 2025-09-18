@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rempah Nusantara | Ekspor Rempah Indonesia</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="nav">
+      <div class="logo">
+        <img
+          src="image/Logo.jpeg"
+          alt="Logo Rimpang Nusantara"
+          style="height: 36px"
+        />
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu" id="menu">
+        <a href="#about" data-i18n="nav.tentang"></a>
+        <a href="#produk" data-i18n="nav.produk"></a>
+        <a href="#proses" data-i18n="nav.proses"></a>
+        <a href="#order" data-i18n="nav.order"></a>
+        <a href="#faq" data-i18n="nav.faq"></a>
+        <a href="#kontak" data-i18n="nav.kontak"></a>
+        <button id="langSwitcher">
+          <img
+            src="https://flagcdn.com/w20/gb.png"
+            width="20"
+            height="14"
+            alt="Lang"
+          />
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header>
+      <div class="content">
+        <h1 data-i18n="hero.title"></h1>
+        <p data-i18n="hero.desc"></p>
+        <div class="cta-wrap">
+          <a href="#order" class="btn btn-primary" data-i18n="hero.cta1"></a>
+          <a href="#produk" class="btn btn-outline" data-i18n="hero.cta2"></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2 data-i18n="about.title"></h2>
+      <p class="subtitle" data-i18n="about.desc"></p>
+      <div class="stats">
+        <div class="stat">
+          <div class="num" data-counter="12">0</div>
+          <div class="lbl" data-i18n="about.years"></div>
+        </div>
+        <div class="stat">
+          <div class="num" data-counter="17">0</div>
+          <div class="lbl" data-i18n="about.countries"></div>
+        </div>
+        <div class="stat">
+          <div class="num" data-counter="1200">0</div>
+          <div class="lbl" data-i18n="about.tons"></div>
+        </div>
+        <div class="stat">
+          <div class="num" data-counter="35">0</div>
+          <div class="lbl" data-i18n="about.farmers"></div>
+        </div>
+      </div>
+      <div class="grid-2" style="margin-top: 32px">
+        <div class="card">
+          <h3 data-i18n="about.visi"></h3>
+          <p data-i18n="about.visi_desc"></p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="about.misi"></h3>
+          <ul id="misiList"></ul>
+        </div>
+      </div>
+      <h3
+        style="margin-top: 36px; color: #222"
+        data-i18n="about.why_title"
+      ></h3>
+      <div class="why" id="whyWrap"></div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="produk">
+      <h2 data-i18n="produk.title"></h2>
+      <p class="subtitle" data-i18n="produk.desc"></p>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="proses">
+      <h2 data-i18n="proses.title"></h2>
+      <p class="subtitle" data-i18n="proses.desc"></p>
+      <div class="timeline" id="timeline"></div>
+      <div class="steps" id="prosesSteps"></div>
+
+      <h3 id="mutuTitle"></h3>
+      <div id="mutuContent" class="progress-wrap"></div>
+    </section>
+
+    <!-- ORDER -->
+    <section id="order">
+      <h2 data-i18n="order.title"></h2>
+      <p class="subtitle" data-i18n="order.desc"></p>
+      <form class="form" id="contactForm">
+        <div class="mb-3">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            data-i18n="[placeholder]order.name"
+            required
+            class="w-full border p-2 rounded"
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            data-i18n="[placeholder]order.email"
+            required
+            class="w-full border p-2 rounded"
+          />
+        </div>
+        <div class="mb-3">
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            data-i18n="[placeholder]order.message"
+            required
+            class="w-full border p-2 rounded"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          data-i18n="order.submit"
+        ></button>
+      </form>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2>FAQ</h2>
+      <div class="faq" id="faqContent"></div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak">
+      <h2 data-i18n="kontak.title"></h2>
+      <div id="kontakContent"></div>
+    </section>
+
+    <footer>
+      &copy; 2025 Rimpang Nusantara Indonesia. All rights reserved.
+    </footer>
+
+    <div class="toast" id="toast"></div>
+
+    <!-- Scripts -->
+    <script src="script/script.js" defer></script>
+  </body>
+</html>

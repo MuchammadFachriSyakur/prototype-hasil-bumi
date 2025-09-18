@@ -1,0 +1,114 @@
+[
+  {
+    "id": "lengkuas",
+    "image": "https://www.masjidalakbar.or.id/wp-content/uploads/2024/09/lengkuas.jpg",
+    "name": {
+      "id": "Lengkuas",
+      "en": "Galangal"
+    },
+    "desc": {
+      "id": "Lengkuas segar & kering ini memiliki kandungan minyak atsiri tinggi yang menghasilkan aroma tajam khas. Teksturnya kokoh dan seratnya kuat sehingga tahan lama disimpan. Warnanya cerah menandakan kualitas bahan yang baik. Produk ini diproses secara higienis untuk menjaga mutu ekspor.\nLengkuas banyak digunakan sebagai bumbu utama dalam masakan tradisional Indonesia seperti sop dan rendang. Selain itu, ia juga menjadi bahan populer dalam ramuan herbal tradisional. Kandungan alaminya dipercaya membantu melancarkan peredaran darah. Produk ini tersedia dalam bentuk potongan maupun bubuk siap pakai.",
+      "en": "This fresh & dried galangal contains high essential oils, giving it a sharp and distinctive aroma. Its firm texture and strong fibers make it long-lasting in storage. The bright color indicates premium quality. It is hygienically processed to maintain export standards.\nGalangal is widely used as a key spice in traditional Indonesian dishes such as soups and rendang. It is also a popular ingredient in herbal remedies. Its natural compounds are believed to help improve blood circulation. Available in both sliced and powdered forms for convenience."
+    },
+    "shortDesc": {
+      "id": "Segar & kering, aroma tajam, cocok bumbu & herbal.",
+      "en": "Fresh & dried, sharp aroma, for spices & herbal."
+    }
+  },
+  {
+    "id": "jahe",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdeZkTsqZSHTeWKKaAK6m_FPZbVEATCWndAQ&s",
+    "name": {
+      "id": "Jahe (Merah & Gajah)",
+      "en": "Ginger (Red & Elephant)"
+    },
+    "desc": {
+      "id": "Jahe merah & gajah tersedia dalam bentuk segar, irisan kering, maupun bubuk instan. Keduanya dikenal memiliki aroma yang kuat dengan warna seragam. Jahe merah memberi rasa pedas lebih tajam, sedangkan jahe gajah lebih lembut. Kadar airnya dikontrol agar kualitas tetap terjaga.\nDalam kuliner, jahe digunakan sebagai bumbu masakan dan minuman herbal. Jahe juga berperan penting dalam jamu tradisional. Banyak penelitian menyebutkan kandungannya bermanfaat untuk daya tahan tubuh. Produk ini cocok untuk rumah tangga, restoran, hingga industri farmasi.",
+      "en": "Red & elephant ginger are available fresh, as dried slices, or instant powder. Both varieties are known for their strong aroma and uniform color. Red ginger has a sharper spiciness, while elephant ginger is milder. Moisture content is carefully controlled to preserve quality.\nIn cooking, ginger is widely used as a spice and herbal drink ingredient. It also plays a vital role in traditional medicine. Many studies suggest its compounds help boost immunity. This product is suitable for households, restaurants, and pharmaceutical industries."
+    },
+    "shortDesc": {
+      "id": "Segar, iris kering, bubuk. Aroma kuat & seragam.",
+      "en": "Fresh, dried slices, powder. Strong aroma & uniform."
+    }
+  },
+  {
+    "id": "kunyit",
+    "image": "https://www.masjidalakbar.or.id/wp-content/uploads/2024/09/kunyit.jpg",
+    "name": {
+      "id": "Kunyit",
+      "en": "Turmeric"
+    },
+    "desc": {
+      "id": "Kunyit ini memiliki warna kuning pekat dengan kandungan kurkumin tinggi. Proses pengeringannya dilakukan secara alami untuk menjaga kualitas. Teksturnya keras namun mudah diolah menjadi bubuk. Standar mutu disesuaikan dengan permintaan buyer internasional.\nDalam farmasi, kunyit banyak digunakan sebagai bahan obat herbal. Industri makanan memanfaatkan kunyit untuk memberi warna alami. Minuman kesehatan berbahan kunyit juga populer karena khasiatnya. Produk ini mendukung berbagai kebutuhan dari dapur hingga industri.",
+      "en": "This turmeric has a deep yellow color with high curcumin content. It is naturally dried to preserve its quality. The texture is firm yet easy to process into powder. Quality standards are tailored to international buyer requirements.\nIn pharmaceuticals, turmeric is widely used as an herbal medicine ingredient. The food industry uses it as a natural coloring agent. Health beverages made from turmeric are also popular for their benefits. This product supports multiple uses from household to industrial scale."
+    },
+    "shortDesc": {
+      "id": "Kuning pekat, kurkumin tinggi, cocok farmasi & makanan.",
+      "en": "Deep yellow, high curcumin, for pharma & food."
+    }
+  },
+  {
+    "id": "cengkeh",
+    "image": "https://i0.wp.com/ciputrahospital.com/wp-content/uploads/2024/11/top-view-dried-cloves-with-wooden-spoon-1.jpg?resize=1024%2C683&ssl=1",
+    "name": {
+      "id": "Cengkeh",
+      "en": "Clove"
+    },
+    "desc": {
+      "id": "Cengkeh kering ini memiliki kadar minyak tinggi lebih dari 15% sesuai standar. Ukurannya seragam dan kondisinya bersih bebas kotoran. Aromanya khas, kuat, dan tahan lama. Produk diproses dengan pengawasan ketat untuk menjaga kualitas.\nCengkeh digunakan secara luas dalam industri rokok kretek. Ia juga menjadi bumbu penting dalam masakan tradisional. Minyak atsiri dari cengkeh bermanfaat dalam pengobatan herbal. Produk ini siap memenuhi permintaan pasar lokal dan ekspor.",
+      "en": "These dried cloves contain over 15% oil, meeting quality standards. They are uniform in size and clean from impurities. The aroma is distinctive, strong, and long-lasting. Processing is done under strict supervision to maintain quality.\nCloves are widely used in the kretek cigarette industry. They also serve as an essential spice in traditional cooking. Clove essential oil is valued in herbal medicine. This product is ready to meet both local and export demands."
+    },
+    "shortDesc": {
+      "id": "Aroma kuat, kadar minyak tinggi, ukuran seragam.",
+      "en": "Strong aroma, high oil content, uniform size."
+    }
+  },
+  {
+    "id": "kapulaga",
+    "image": "https://indomgb.s3.amazonaws.com/wp-content/uploads/2025/05/21232031/kapulaga-jawa-768x512.jpeg",
+    "name": {
+      "id": "Kapulaga",
+      "en": "Cardamom"
+    },
+    "desc": {
+      "id": "Kapulaga hijau & putih ini memiliki aroma tajam khas. Kadar kotoran sangat rendah sehingga siap ekspor. Biji berwarna cerah dengan kualitas seragam. Produk dikemas dengan standar internasional.\nKapulaga banyak dipakai dalam masakan Timur Tengah. Ia juga populer dalam minuman rempah tradisional. Selain itu, kapulaga berkhasiat dalam ramuan herbal. Produk ini mendukung kebutuhan kuliner dan farmasi global.",
+      "en": "This green & white cardamom has a strong and distinctive aroma. It contains very low impurities, making it export-ready. The seeds are bright in color with uniform quality. Packaging follows international standards.\nCardamom is widely used in Middle Eastern cuisine. It is also popular in traditional spice beverages. In addition, cardamom is valued in herbal remedies. This product supports global culinary and pharmaceutical needs."
+    },
+    "shortDesc": {
+      "id": "Hijau & putih, aroma tajam, siap ekspor.",
+      "en": "Green & white, strong aroma, export-ready."
+    }
+  },
+  {
+    "id": "kemiri",
+    "image": "https://res.cloudinary.com/dk0z4ums3/image/upload/v1671590469/attached_image/kemiri-ketahui-kandungan-dan-manfaatnya-untuk-kesehatan.jpg",
+    "name": {
+      "id": "Kemiri Kupas",
+      "en": "Shelled Candlenut"
+    },
+    "desc": {
+      "id": "Kemiri kupas tersedia dalam kondisi utuh maupun pecah. Kualitasnya food-grade dengan kadar minyak sesuai standar. Warna biji cerah dan bersih dari kotoran. Produk ini dikemas rapi agar tahan lama.\nKemiri digunakan sebagai bumbu penting dalam masakan. Ia juga dikenal sebagai bahan minyak rambut tradisional. Industri makanan dan kosmetik memanfaatkan kemiri secara luas. Produk ini mendukung pasar domestik maupun internasional.",
+      "en": "Shelled candlenuts are available whole or broken. They are food-grade with oil levels meeting standards. The kernels are bright in color and clean from impurities. Packaging is done carefully to ensure long shelf life.\nCandlenuts are used as an essential cooking spice. They are also known as a traditional hair oil ingredient. The food and cosmetic industries use candlenuts widely. This product supports both domestic and international markets."
+    },
+    "shortDesc": {
+      "id": "Utuh/pecah, food-grade, kadar minyak sesuai.",
+      "en": "Whole/broken, food-grade, oil level compliant."
+    }
+  },
+  {
+    "id": "brambang",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxVIb8FGNSy2IC8GRwV1wpE-M7LojuYveLPw&s",
+    "name": {
+      "id": "Bawang",
+      "en": "Shallot"
+    },
+    "desc": {
+      "id": "Bawang merah premium ini berasal dari lahan subur Indonesia. Aromanya tajam dengan rasa khas yang kuat. Tersedia dalam bentuk segar maupun kering. Produk dikemas higienis untuk menjaga kesegaran.\nShallot digunakan untuk memperkaya rasa masakan tradisional maupun modern. Ia populer di rumah tangga, restoran, hingga industri. Kandungannya dipercaya baik untuk kesehatan tubuh. Produk ini siap memenuhi kebutuhan lokal dan ekspor.",
+      "en": "This premium shallot comes from fertile Indonesian soil. It has a strong aroma with a distinct flavor. Available in both fresh and dried forms. Packaged hygienically to maintain freshness.\nShallots enhance the taste of both traditional and modern dishes. They are popular in households, restaurants, and industry. Their compounds are believed to support health benefits. This product is ready to meet local and export demands."
+    },
+    "shortDesc": {
+      "id": "Bawang merah premium, aroma tajam & rasa khas.",
+      "en": "Premium shallots, strong aroma & distinct taste."
+    }
+  }
+]
