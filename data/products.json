@@ -113,7 +113,7 @@
   },
   {
     "id": "kacang",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxVIb8FGNSy2IC8GRwV1wpE-M7LojuYveLPw&s",
+    "image": "image/kacang.jpg",
     "name": {
       "id": "Kacang Tanah",
       "en": "Peanuts"
@@ -127,5 +127,6 @@
       "en": "Naturally savory, slightly sweet, and crunchy."
     }
 ]
+
 
 
