@@ -110,6 +110,22 @@
       "id": "Bawang merah dan bawang putih premium, aroma tajam & rasa khas.",
       "en": "Premium red onions and garlic, with a strong aroma & distinctive taste."
     }
-  }
+  },
+  {
+    "id": "kacang",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxVIb8FGNSy2IC8GRwV1wpE-M7LojuYveLPw&s",
+    "name": {
+      "id": "Kacang Tanah",
+      "en": "Peanuts"
+    },
+    "desc": {
+      "id": "Salah satu jenis kacang tanah berkualitas tinggi adalah dari Tuban, Jawa Timur Indonesia yang memiliki ciri khas mentes atau padat berisi, rasa gurih yang alami dengan sentuhan manis, serta tekstur yang enak dan renyah saat diolah. Produk ini dikenal karena kualitasnya yang baik, sering disebut 'kualitas super', dan sangat serbaguna untuk berbagai olahan kuliner, mulai dari camilan seperti kacang bawang hingga bahan masakan. Merupakan komoditi pertanian unggulan dari Tuban Jawa Timur Indonesia dengan pemrosesan dikupas kulit arinya, siap pakai untuk berbagai masakan atau camilan dan terjamin keaslian dan kualitasnya.",
+      "en": "One type of high-quality peanut comes from Tuban, East Java, Indonesia. It is characterized by its dense, naturally savory flavor with a touch of sweetness, and a delicious, crunchy texture when processed. This product is known for its high quality, often referred to as super quality, and is highly versatile in various culinary applications, from snacks like garlic peanuts to cooking ingredients. This superior agricultural commodity from Tuban, East Java, Indonesia, is processed with the husk removed, ready to use in various dishes or snacks, with guaranteed authenticity and quality."
+    },
+    "shortDesc": {
+      "id": "Gurih alami, sedikit manis, renyah.",
+      "en": "Naturally savory, slightly sweet, and crunchy."
+    }
 ]
+
 
