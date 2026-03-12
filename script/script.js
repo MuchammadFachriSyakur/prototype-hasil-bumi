@@ -81,33 +81,44 @@ const FORM_ENDPOINT = "";
 const form = document.getElementById("orderForm");
 const toast = document.getElementById("toast");
 
+// Helper function for showing toast
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.add("show");
+  setTimeout(() => toast.classList.remove("show"), 4000);
+}
+
 form?.addEventListener("submit", async (e) => {
   e.preventDefault();
   const data = Object.fromEntries(new FormData(form).entries());
 
   if (!FORM_ENDPOINT) {
-    toast.classList.add("show");
-    setTimeout(() => toast.classList.remove("show"), 4000);
+    showToast(translations[currentLang]?.opening_wa || "Membuka WhatsApp...");
     form.reset();
     return;
   }
+  // ... rest of form logic if needed
+});
 
-  try {
-    const res = await fetch(FORM_ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-    if (res.ok) {
-      toast.classList.add("show");
-      setTimeout(() => toast.classList.remove("show"), 4000);
-      form.reset();
-    } else {
-      alert("Gagal mengirim form. Silakan coba lagi.");
-    }
-  } catch (err) {
-    alert("Terjadi kesalahan. Silakan coba lagi.");
-  }
+// Handle contact form redirect to WA
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contactForm");
+  contactForm?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    let waText = translations[currentLang]?.order?.wa_msg || "Halo Rempah Nusantara,\n\nNama: {name}\nEmail: {email}\nPesan: {message}";
+    waText = waText.replace("{name}", name).replace("{email}", email).replace("{message}", message);
+
+    const waUrl = `https://wa.me/6285230017377?text=${encodeURIComponent(waText)}`;
+
+    showToast(translations[currentLang]?.opening_wa || "Membuka WhatsApp...");
+    setTimeout(() => {
+      window.open(waUrl, "_blank");
+    }, 800);
+  });
 });
 
 // ===============================
@@ -169,41 +180,45 @@ function renderAll() {
 // Data-i18n renderer
 // ===============================
 function renderText(data, lang) {
+  const currentTranslations = data?.[lang];
+  if (!currentTranslations) return;
+
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const rawKey = el.dataset.i18n;
 
-    // Placeholder format: [placeholder]form_contact.name
     if (rawKey.startsWith("[placeholder]")) {
       const key = rawKey.replace("[placeholder]", "").trim();
       const keys = key.split(".");
-      let value = data?.[lang];
+      let value = currentTranslations;
       for (const k of keys) value = value?.[k];
 
-      if (value !== undefined) {
-        el.setAttribute("placeholder", value);
-      } else {
-        el.setAttribute("placeholder", `[${key} not found]`);
-      }
+      if (value !== undefined) el.setAttribute("placeholder", value);
     } else {
-      // Regular text replacement (innerText)
       const keys = rawKey.split(".");
-      let value = data?.[lang];
+      let value = currentTranslations;
       for (const k of keys) value = value?.[k];
 
       if (value !== undefined) {
-        el.textContent = value;
-      } else {
-        el.textContent = `[${rawKey} not found]`;
+        if (el.tagName === "META") {
+          el.setAttribute("content", value);
+        } else {
+          el.innerHTML = value; // Use innerHTML for cases like &copy;
+        }
       }
     }
   });
+
+  // Update Page Title
+  if (currentTranslations.seo?.title) {
+    document.title = currentTranslations.seo.title;
+  }
 
   // Ubah ikon bahasa
   const langBtn = document.getElementById("langSwitcher");
   if (langBtn) {
     const img = langBtn.querySelector("img");
     img.src =
-      currentLang === "id"
+      lang === "id"
         ? "https://flagcdn.com/w20/gb.png"
         : "https://flagcdn.com/w20/id.png";
   }

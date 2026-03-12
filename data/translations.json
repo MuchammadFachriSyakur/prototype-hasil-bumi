@@ -77,10 +77,22 @@
       ],
       "mutu": "Standar Mutu (Target)",
       "mutu_items": [
-        { "label": "Kadar Air (Moisture)", "value": "12%" },
-        { "label": "Kebersihan (Cleanliness)", "value": "98%" },
-        { "label": "Oil Content (Cengkeh)", "value": "15%+" },
-        { "label": "Broken Ratio (Kemiri Kupas)", "value": "5%" }
+        {
+          "label": "Kadar Air (Moisture)",
+          "value": "12%"
+        },
+        {
+          "label": "Kebersihan (Cleanliness)",
+          "value": "98%"
+        },
+        {
+          "label": "Oil Content (Cengkeh)",
+          "value": "15%+"
+        },
+        {
+          "label": "Broken Ratio (Kemiri Kupas)",
+          "value": "5%"
+        }
       ]
     },
     "order": {
@@ -91,7 +103,8 @@
       "message": "Pesan Anda",
       "success": "Pesan Anda berhasil dikirim. Terima kasih!",
       "submit": "Kirim Permintaan Penawaran",
-      "note": "* Dengan mengirim form ini, Anda menyetujui kami untuk menghubungi via email/WhatsApp."
+      "note": "* Dengan mengirim form ini, Anda menyetujui kami untuk menghubungi via email/WhatsApp.",
+      "wa_msg": "Halo Sekawan Cipta Dinar,\n\nNama: {name}\nEmail: {email}\nPesan: {message}"
     },
     "faq": {
       "title": "FAQ",
@@ -124,9 +137,21 @@
       "site": "www.dummy.com"
     },
     "footer": "&copy; Tera Software Developer.",
-    "toast": "Terima kasih! Permintaan Anda sudah kami terima."
+    "toast": "Terima kasih! Permintaan Anda sudah kami terima.",
+    "seo": {
+      "title": "Rempah Nusantara | Ekspor Rempah Indonesia Kualitas Premium",
+      "description": "Pemasok rempah-rempah Indonesia kualitas ekspor terbaik. Menyediakan jahe, kunyit, kayu manis, dan hasil bumi pilihan langsung dari petani.",
+      "keywords": "rempah indonesia, ekspor rempah, supplier hasil bumi, jahe premium, rimpang nusantara",
+      "detail_title": "Detail Produk | Rempah Nusantara",
+      "detail_description": "Detail produk rempah pilihan dari Rempah Nusantara. Kualitas terbaik langsung dari sumbernya."
+    },
+    "floating_wa": "Tanya Kami",
+    "opening_wa": "Membuka WhatsApp...",
+    "detail": {
+      "order_now": "Pesan Sekarang",
+      "order_msg": "Halo, saya tertarik dengan produk ini: "
+    }
   },
-
   "en": {
     "nav": {
       "tentang": "About",
@@ -205,10 +230,22 @@
       ],
       "mutu": "Quality Standards (Target)",
       "mutu_items": [
-        { "label": "Moisture", "value": "12" },
-        { "label": "Cleanliness", "value": "98" },
-        { "label": "Oil Content (Clove)", "value": "15" },
-        { "label": "Broken Ratio (Peeled Candlenut)", "value": "5" }
+        {
+          "label": "Moisture",
+          "value": "12"
+        },
+        {
+          "label": "Cleanliness",
+          "value": "98"
+        },
+        {
+          "label": "Oil Content (Clove)",
+          "value": "15"
+        },
+        {
+          "label": "Broken Ratio (Peeled Candlenut)",
+          "value": "5"
+        }
       ]
     },
     "order": {
@@ -219,7 +256,8 @@
       "message": "Your Message",
       "success": "Your message has been sent. Thank you!",
       "submit": "Send Request",
-      "note": "* By submitting this form, you allow us to contact you via email/WhatsApp."
+      "note": "* By submitting this form, you allow us to contact you via email/WhatsApp.",
+      "wa_msg": "Hello Sekawan Cipta Dinar,\n\nName: {name}\nEmail: {email}\nMessage: {message}"
     },
     "faq": {
       "title": "FAQ",
@@ -252,6 +290,19 @@
       "site": "www.dummy.com"
     },
     "footer": "&copy; Tera Software Developer.",
-    "toast": "Thank you! Your request has been received."
+    "toast": "Thank you! Your request has been received.",
+    "seo": {
+      "title": "Rempah Nusantara | Premium Indonesian Spices Export",
+      "description": "Best Indonesian export quality spice supplier. Providing ginger, turmeric, cinnamon, and selected agricultural products directly from farmers.",
+      "keywords": "indonesian spices, spice export, agricultural supplier, premium ginger, archipelago rhizomes",
+      "detail_title": "Product Detail | Rempah Nusantara",
+      "detail_description": "Selected spice product details from Rempah Nusantara. Best quality directly from the source."
+    },
+    "floating_wa": "Ask Us",
+    "opening_wa": "Opening WhatsApp...",
+    "detail": {
+      "order_now": "Order Now",
+      "order_msg": "Hi, I'm interested in this product: "
+    }
   }
 }
