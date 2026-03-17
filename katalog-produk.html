@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog Produk | Sekawan Cipta Dinar</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="image/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="image/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .btn {
+        display: inline-block;
+        padding: 10px 22px;
+        border-radius: var(--radius);
+        font-weight: 500;
+        text-decoration: none;
+        transition: 0.25s ease;
+        border: none;
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .btn.ghost {
+        background: var(--green);
+        color: #fff;
+        border: 2px solid var(--green);
+        font-weight: 600;
+      }
+
+      .btn.ghost:hover {
+        background: #0e5c3e;
+        border-color: #0e5c3e;
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      @media print {
+        nav,
+        .download,
+        footer {
+          display: none !important;
+        }
+        body {
+          background: #fff !important;
+          color: #000 !important;
+          font-size: 12pt;
+          -webkit-print-color-adjust: exact;
+        }
+        .product-grid {
+          display: block !important;
+        }
+        .product-item {
+          display: block !important;
+          width: 100% !important;
+          margin-bottom: 16px;
+          page-break-inside: avoid;
+          box-shadow: none !important;
+        }
+        .product-item img {
+          width: 80% !important;
+          height: auto !important;
+          object-fit: contain;
+          margin: 0 auto;
+        }
+        .product-item .info h3 {
+          font-size: 14pt !important;
+        }
+        .product-item .info p {
+          font-size: 12pt !important;
+        }
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="scrolled">
+      <div class="logo">Sekawan Cipta Dinar</div>
+      <div class="menu">
+        <a href="index.html">Beranda</a>
+        <a href="katalog-company.html">Profil</a>
+        <a href="katalog-produk.html">Produk</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+    </nav>
+
+    <header
+      style="
+        height: 60vh;
+        background: url('image/hero-rimpang.jpg') center/cover no-repeat;
+      "
+    >
+      <div class="content">
+        <h1 id="hero-title">Katalog Produk</h1>
+        <p id="hero-desc">
+          Jelajahi produk unggulan kami dari alam Indonesia, segar, berkualitas,
+          dan siap ekspor.
+        </p>
+        <div class="download" style="margin-top: 12px">
+          <a
+            class="btn ghost"
+            href="#"
+            id="download-pdf"
+            onclick="window.print()"
+          >
+            ⬇️ Download Katalog (PDF)
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Produk Kami</h2>
+      <p class="subtitle">
+        Semua produk dipilih dengan standar kualitas tinggi dan siap untuk pasar
+        lokal maupun global.
+      </p>
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <footer>
+      <p>&copy; Tera Software Developer.</p>
+    </footer>
+
+    <script>
+      const heroTranslations = {
+        id: {
+          title: "Katalog Produk",
+          desc: "Jelajahi produk unggulan kami dari alam Indonesia, segar, berkualitas, dan siap ekspor.",
+        },
+        en: {
+          title: "Product Catalog",
+          desc: "Explore our premium products from Indonesia's nature, fresh, high quality, and ready for export.",
+        },
+      };
+
+      // Ambil bahasa dari localStorage
+      let currentLang = localStorage.getItem("lang") || "id";
+
+      document.getElementById("hero-title").innerText =
+        heroTranslations[currentLang].title;
+      document.getElementById("hero-desc").innerText =
+        heroTranslations[currentLang].desc;
+
+      // Fetch JSON produk
+      async function loadProducts() {
+        try {
+          const res = await fetch("data/products.json");
+          const products = await res.json();
+
+          const grid = document.getElementById("product-grid");
+          grid.innerHTML = ""; // bersihkan dulu
+
+          products.forEach((p) => {
+            const item = document.createElement("div");
+            item.className = "product-item";
+            item.innerHTML = `
+          <img src="${p.image}" alt="${p.name[currentLang]}" />
+          <div class="info">
+            <h3>${p.name[currentLang]}</h3>
+            <p>${p.shortDesc[currentLang]}</p>
+          </div>
+        `;
+            grid.appendChild(item);
+          });
+        } catch (err) {
+          console.error("Gagal load data produk:", err);
+        }
+      }
+
+      // Render pertama kali
+      loadProducts();
+    </script>
+  </body>
+</html>

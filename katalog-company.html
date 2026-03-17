@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog Perusahaan | Sekawan Cipta Dinar</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="image/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="image/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .btn {
+        display: inline-block;
+        padding: 10px 22px;
+        border-radius: var(--radius);
+        font-weight: 500;
+        text-decoration: none;
+        transition: 0.25s ease;
+        border: none;
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .btn.ghost {
+        background: transparent;
+        border: 2px solid var(--green);
+        color: var(--green);
+      }
+
+      .btn.ghost:hover {
+        background: var(--green);
+        color: #fff;
+        box-shadow: var(--shadow);
+      }
+
+      @media print {
+        nav,
+        .download,
+        footer {
+          display: none !important;
+        }
+
+        header {
+          height: auto !important;
+          background: none !important;
+          color: #000 !important;
+        }
+
+        header .content {
+          text-align: center;
+          padding: 20px 0;
+        }
+
+        body {
+          background: #fff !important;
+          color: #000 !important;
+          font-size: 12pt;
+        }
+
+        section {
+          margin: 20px 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+          color: #111 !important;
+        }
+
+        .why-item {
+          border: 1px solid #ccc;
+          padding: 8px;
+          border-radius: 8px;
+          margin-bottom: 8px;
+        }
+
+        * {
+          box-shadow: none !important;
+          text-shadow: none !important;
+        }
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="scrolled">
+      <div class="logo">Sekawan Cipta Dinar</div>
+    </nav>
+
+    <header
+      style="
+        height: 60vh;
+        background: url('image/hero-rimpang.jpg') center/cover no-repeat;
+      "
+    >
+      <div class="content">
+        <h1 id="hero-title">Katalog Perusahaan</h1>
+        <p id="hero-desc">
+          Mengenal lebih dekat profil, visi, dan keunggulan kami dalam
+          menyediakan produk terbaik dari alam Indonesia.
+        </p>
+      </div>
+    </header>
+
+    <section>
+      <h2 id="tentang-kami">Tentang Kami</h2>
+      <p class="subtitle" id="tentang-kami-subtitle">
+        Kami adalah perusahaan eksportir dan distributor hasil bumi terbaik yang
+        berkomitmen menghadirkan kualitas unggulan dari petani lokal ke pasar
+        global.
+      </p>
+      <div class="download" style="margin-top: 12px">
+        <a
+          class="btn ghost"
+          href="#"
+          id="download-pdf"
+          onclick="window.print()"
+        >
+          ⬇️ Download Katalog (PDF)
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="title-visi-misi">Visi & Misi</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3 id="title-visi">Visi</h3>
+          <p>
+            Menjadi perusahaan eksportir hasil bumi terkemuka di Asia Tenggara
+            yang berdaya saing global dan mendukung kesejahteraan petani
+            Indonesia.
+          </p>
+        </div>
+        <div class="card">
+          <h3 id="title-misi">Misi</h3>
+          <ul style="padding-left: 18px; color: #555">
+            <li>Mengembangkan kemitraan berkelanjutan dengan petani lokal.</li>
+            <li>
+              Menjaga kualitas produk melalui proses seleksi dan pengolahan
+              terbaik.
+            </li>
+            <li>Mendorong ekspor berkelanjutan berbasis kearifan lokal.</li>
+            <li>Membangun brand Indonesia di pasar dunia.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Keunggulan Kami</h2>
+      <div class="why">
+        <div class="why-item">
+          <h4>🌿 Bahan Baku Alami</h4>
+          <p>
+            Semua produk berasal langsung dari hasil panen petani binaan kami
+            tanpa campuran kimia berbahaya.
+          </p>
+        </div>
+        <div class="why-item">
+          <h4>⚙️ Proses Modern</h4>
+          <p>
+            Menggunakan fasilitas pengolahan yang higienis dan sesuai standar
+            ekspor internasional.
+          </p>
+        </div>
+        <div class="why-item">
+          <h4>🤝 Komitmen & Kepercayaan</h4>
+          <p>
+            Kami menjaga kepercayaan mitra melalui transparansi, ketepatan
+            waktu, dan komunikasi yang terbuka.
+          </p>
+        </div>
+        <div class="why-item">
+          <h4>🌍 Jangkauan Global</h4>
+          <p>
+            Produk kami telah menjangkau berbagai negara di Asia, Timur Tengah,
+            dan Eropa.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; Tera Software Developer.</p>
+    </footer>
+
+    <script src="script/catalog-company.js"></script>
+  </body>
+</html>
